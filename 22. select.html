@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>select</title>
+</head>
+<body>
+<form name='cityform' >
+  <select name='city'>
+    <option>Выберите..
+  </select>
+</form>
+<script>  
+let cities = ['Москва', 'Нижний Новгород', 'Санкт-Петербург']; 
+
+let city = document.forms.cityform.city;
+city.add(new Option('111','111'),city.options[2]);
+cities.sort();
+
+let option;  
+	
+for(let i = 0; i < cities.length; ++i){
+  option = new Option(cities[i],i,false,true);
+  city.add(option);
+}    
+city.options[0].selected = true;  
+
+
+
+  
+</script> 
+  
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+

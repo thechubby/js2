@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>select</title>
+</head>
+<body>
+<form name='years' >
+<input type="button" value="Добавить ⬆" onclick="addOption(0)"/>
+  <select id="select">
+    <option value="2019">2019</option>
+  </select>
+<input type="button" value="Добавить ⬇" onclick="addOption(1)"/>
+<input type="button" value="Очистить" onclick="clearSelect()"/>
+</form>
+
+<script>  
+function addOption(flag){
+  let select = document.forms.years[1];
+  let option, year;
+  
+  if( !flag ) {
+    year = +select.options[0].value + 1;
+    option = new Option(year, year, false, true);
+    select.add(option, select.options[0]);
+  } else {
+    let len = select.options.length;
+    year = select.options[len-1].value - 1;
+    option = new Option(year, year, false, true);
+    select.add(option);
+  }
+}
+function clearSelect(){
+ let select = document.forms.years[1];
+ select.innerHTML = '<option value="2019">2019</option>'
+}
+
+//https://goo.gl/forms/W1eJAelSKXsfgXp12
+
+  
+</script> 
+  
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
