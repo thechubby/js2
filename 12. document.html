@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>document</title>
+</head>
+<body>
+   <select name='foo'>
+     <option>1</option>
+     <script>
+       for(let i = 0; i < 10; i++)
+         document.write(`<option>${i}`);
+     </script>
+   </select>
+   <script>
+  //console.log(document);
+  function go(){ 
+    document.write('Сюрприз!');
+  }
+  </script> 
+  <button onclick='go()' >Поехали</button>
+
+
+  
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>форма</title>
+</head>
+<body>
+  <form>
+    <input name='text' />
+  </form>
+
+  <script>  
+	function go(){
+      let form = document.forms[0];
+      form.action = 'https://yandex.ru/search/';
+      form.submit();
+	}
+  </script> 
+  <button onclick='go()' >Поехали</button> 
+  
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+

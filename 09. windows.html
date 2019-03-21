@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Окно</title>
+</head>
+<body>
+  <button onclick='go()' >Окно откройся.</button>
+  <button onclick='go1()' >Передвинуть</button>
+  <button onclick='go2()' >Изменить размер</button>
+  <button onclick='go3()' >Окно закрыть.</button>
+
+  <script>
+  let win;
+  function go(w=300,h=140,l=140,t=50){ 
+    win = open('','win',`width=${w},height=${h},left=${l},top=${t}`);
+  }
+  function go1(){ 
+    if(win && !win.closed){
+      //win.moveTo(-400,300);
+      win.moveBy(-10,10);
+    }  
+  }
+  </script>
+  
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Фитнес-бот</title>
+</head>
+<body>
+  <button onclick='go()' >Фитнес-бот</button>
+
+  <script>
+  function go(){
+    const a = confirm('Завтракали ли Вы?');
+    if( !a ) {
+      alert('Нужно кушать утром!');
+    } else {
+      let b = prompt('Что кушали?');
+      if( b )
+        alert(`Мы тоже очень любим ${b}`);
+      else   
+        alert('Ну и ладно.. ');
+    }    
+  }
+  </script>
+</body>
+</html>

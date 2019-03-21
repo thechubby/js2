@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Таймеры</title>
+</head>
+<body>
+  <button onclick='i = setTimeout(go, 2000)' >
+    Таймер одноразовый
+  </button>
+  <button onclick='clearTimeout(i)' >
+    Стоп
+  </button>
+
+  <script>
+  let i;
+  function go(){ 
+    console.log(new Date().toLocaleTimeString());
+  }
+  </script>
+  
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+

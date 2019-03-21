@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>лаб</title>
+</head>
+<body>
+  <script>  
+	function go(){
+      let w = 300;
+      let h = 100;
+      let l = (screen.width - w)/2;
+      let t = (screen.height - h)/2;
+    
+      let win = open('','w',`width=${w},height=${h},left=${l},top=${t}`);
+      
+      setInterval(function(){
+        win.document.body.innerHTML = new Date().toLocaleTimeString();
+      },1000);
+    
+	}
+  </script> 
+  <button onclick='go()' >Поехали</button> 
+  
+  <!-- По нажатию на кнопку, создавать новое окно, центрированное на screen. Внутри нового окна, показывать актуальные часы минуты секунды -->
+   
+
+
+
+  
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+

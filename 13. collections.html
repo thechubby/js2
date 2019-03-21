@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>document</title>
+</head>
+<body>
+   <img src='http://placekitten.com/220/150' alt='' />
+   <img src='http://placehold.it/220x150' alt='' />
+   <hr>
+   <a href='#'>Ссылка1</a>
+   <a href='#'>Ссылка2</a>
+   <a href='#'>Ссылка3</a>
+   <hr>
+   <form></form>
+   <form></form>
+   <hr>
+   <!--<iframe src='https://www.specialist.ru'></iframe>-->
+   
+   <script>
+   function go(){     
+     //alert(document.images);
+     console.log(document.images.length);
+     let imgCat = document.images[0];
+     imgCat.src = 'http://placekitten.com/440/300';
+     imgCat.width = '220';
+     
+     document.links[1].href = 'https://www.specialist.ru';
+     document.links[1].target = '_blank';
+   }
+  </script> 
+  <button onclick='go()' >Поехали</button>
+
+
+  
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+

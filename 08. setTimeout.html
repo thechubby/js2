@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Таймеры</title>
+</head>
+<body>
+  <button onclick='go(5)' >
+    Таймер одноразовый
+  </button>
+
+  <script>
+  let i;
+  function go(step){ 
+    let i = 0, tick = 1000;
+    
+    (function(){
+      if(i < step){
+        console.log(i++);
+        setTimeout(arguments.callee, tick);
+      } else { alert('Приехал') }
+    })();
+    
+  }
+  </script>
+  
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+

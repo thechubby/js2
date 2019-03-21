@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>css</title>
+</head>
+<body>
+  <div id='foo'>Текст</div>
+  <a href='#'>Ссылка</a>
+
+  <script>  
+	function go(){
+      let elem = document.links[0];
+      
+      elem.style.color = '#369';
+      elem.style.border = '1px solid red';
+      //elem.style.borderColor = 'navy';
+     
+     let i = 0, step = 40, tick = 40;
+    
+    (function(){
+      if(i < step){
+        elem.style.opacity = 1 - i/step;
+        i++;
+        setTimeout(arguments.callee, tick);
+      } else { alert('Приехал') }
+    })();  
+     
+	}
+  </script> 
+  <button onclick='go()' >Поехали</button> 
+  
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+

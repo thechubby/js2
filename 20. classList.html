@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>className</title>
+  <style>
+  .select{
+    margin: 30px 0 0 50px;
+    font-family: Arial;
+    transform: rotate(20deg);
+    display: block;
+  }  
+  .foo{
+    border: 1px solid red
+  }
+  .pulse{
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: -2px
+  }
+  </style>
+</head>
+<body>
+  <a href='#' class='foo pulse'>Ссылка</a>
+
+  <script>  
+	function go(){
+      let elem = document.links[0];
+      elem.classList.add('select');     
+      elem.classList.remove('foo');     
+      elem.classList.toggle('pulse');     
+     
+	}
+  </script> 
+  <button onclick='go()' >Поехали</button> 
+  
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+

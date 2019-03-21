@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Окно</title>
+</head>
+<body>
+  <button onclick='go()' >Поехали</button>
+
+  <script>
+  function go(){ 
+    //console.log(navigator);
+    //console.log(history);
+    
+    /*history.forward(); 
+    history.back(); 
+    history.go(3); */
+    
+    console.log(screen.width/2);
+    console.log(screen.height/2);
+    open('','',`width=200,height=300,top=${screen.height/2-150}`)
+  }
+
+  </script>
+  
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+

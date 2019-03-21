@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>input</title>
+</head>
+<body>
+  <form name='foo'>
+    <input type='text' name='text' /><br/>
+    <input type='password' name='psw' /><br/>
+    <input type='color' name='color' /><br/>
+    <input type='checkbox' name='ch1' value=1 />1<br/>
+    <input type='checkbox' name='ch1' value=2 />2<br/>
+  </form>
+
+  <script>  
+	function go(){
+      /*let form = document.forms[0];
+      alert(form.elements[2])*/
+      let form = document.forms.foo;
+      let color = form.elements.color.value;
+      //alert(color);
+      form.elements.color.value = '#735184';
+      
+      let n = form.elements.ch1[0].value;
+      console.log(n);
+      form.elements.ch1[1].checked = true;
+      
+      console.log(form.elements.length);
+	}
+  </script> 
+  <button onclick='go()' >Поехали</button> 
+  
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+

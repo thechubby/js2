@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>модальные окошки</title>
+</head>
+<body>
+  <div onclick='alert(1)' >alert</div>
+  <div onclick='go()' >confirm</div>
+  <div onclick='go2()' >prompt</div>
+
+  <script>
+  function go(){
+    const a = confirm('У вас есть вопросы?');
+    console.log(a);
+  }
+  function go2(){
+    const a = prompt('Какая зарплата?',100000);
+    console.log(typeof a);
+  }
+  </script>
+</body>
+</html>
