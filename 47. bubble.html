@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>onclick</title>
+  <style>  
+  div{ 
+    padding: 100px;
+    background: rgba(215,30,45,.5);
+    font-size: 2rem;
+    color: white
+  }
+  </style>  
+</head>
+<body>
+
+   <div onclick='go(this)'>ДИВ1
+       <div onclick='go(this)'>ДИВ2
+            <div onclick='go(this)'>ДИВ3</div>
+       </div>
+   </div>
+   
+   <script>   
+   function go(elem){ 
+      alert(elem.firstChild.nodeValue)
+   }
+  </script> 
+  
+  
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+

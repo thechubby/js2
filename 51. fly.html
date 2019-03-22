@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>bee</title>  
+  <style>
+    .bee{
+      position: absolute
+    }
+  </style>
+</head>
+<body>
+
+   <img src='http://pngimg.com/uploads/bee/bee_PNG8.png' alt='' class='bee' width=20 />
+   
+   <script>  
+   let img = document.querySelector('.bee');  
+   
+   document.addEventListener('mousemove', function handler(ev){
+          img.style.left = ev.clientX+'px';
+          img.style.top = ev.clientY+'px';
+       }
+   );
+  </script> 
+  
+  
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+

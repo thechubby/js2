@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>createElement</title>  
+</head>
+<body>
+
+   <div id='place'></div>
+
+   <script>  
+	function go(){
+      let place = document.querySelector('#place');   
+      let iframe = document.createElement('iframe');
+      iframe.src = "https://www.youtube.com/embed/Kr6Pn4rr4Kk";
+      iframe.width = 560;
+      iframe.height = 315;
+      
+      console.log(iframe);
+      
+      if( !place.hasChildNodes() )
+        place.appendChild(iframe);
+    }
+  </script> 
+  <button onclick='go()' >Поехали</button> 
+  
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+

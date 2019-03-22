@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>onclick</title>  
+</head>
+<body>
+
+   <div id='place'></div>
+   
+   <textarea 
+     onkeyup="keyup(this)"     
+   ></textarea><hr>
+   <output id='res'></output>
+   
+   <script>  
+   function keyup(elem){ 
+      let res = document.querySelector('#res');
+      res.innerHTML = elem.value + ` (${elem.value.length})`;
+   }
+  </script> 
+  
+  
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+

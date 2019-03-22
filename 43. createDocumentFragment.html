@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>createDocumentFragment</title>  
+</head>
+<body>
+
+   <div id='place'></div>
+
+   <script>  
+	function go(){
+      let place = document.querySelector('#place');  
+      let wrapper = document.createDocumentFragment();
+      
+      let img = document.createElement('img');
+      img.src = "http://placehold.it/220/150";
+      wrapper.appendChild(img);
+      
+      let mark = document.createElement('mark');
+      mark.innerHTML = "Я Марк 👦";
+      wrapper.appendChild(mark);
+      
+      if( !place.hasChildNodes() )
+        place.appendChild(wrapper);
+      
+    }
+  </script> 
+  <button onclick='go()' >Поехали</button> 
+  
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+

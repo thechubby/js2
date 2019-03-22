@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>removeChild</title>
+</head>
+<body>
+  
+  <h1>Header</h1>
+  <ul id='ul'>
+    <li>item1</li>
+    <li>item2</li>
+  </ul>
+
+  <script>  
+    let i = 1;
+	function go(){
+      let ul = document.querySelector('ul'); 
+      if(ul.hasChildNodes())      
+        ul.removeChild(ul.lastChild);
+        
+      //ul.remove();  //Метод Славика
+    }
+  </script> 
+  <button onclick='go()' >Поехали</button> 
+  
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>homework1</title>
+</head>
+<body>
+  <a href='http://htmllab.ru/zadaniya-po-javascript-form-input/'>домашка</a>
+  
+  <table id='homework'></table>
+  
+  <script>  
+	function go(){
+      let table = document.getElementById('homework');
+      let tr,td;
+      
+       for(let i = 0; i < 20; i++){
+        tr = table.insertRow(i);
+        for(let j = 0; j < 20; j++){
+          td = tr.insertCell(j);
+          td.innerHTML = Math.round(Math.random()*899+100);
+        }
+       }
+     
+	}
+  </script> 
+  <button onclick='go()' >Поехали</button> 
+  
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+

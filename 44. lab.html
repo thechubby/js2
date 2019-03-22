@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>lab</title>  
+</head>
+<body>
+
+   <div id='place'></div>
+
+   <script>  
+    const $ = selector => document.querySelectorAll(selector);
+    const _ = (elem,text = '') => {
+      let t = document.createElement(elem);
+      t.innerHTML = text;
+      return t;
+    }
+    
+	function addForm(){
+      //место посадки 😂
+      let place = $('#place')[0];  
+      
+      //создание элементов
+      let h2    = _('h2','Форма поиска');
+      let form  = _('form');
+      let input = _('input');
+      let submit= _('input');
+      
+      //сборка формы
+      form.action = 'https://yandex.ru/search';
+      input.name = 'text';
+      submit.type = 'submit';
+      form.appendChild(input);
+      form.appendChild(submit);
+      
+      place.appendChild(h2);
+      place.appendChild(form);
+    }
+  </script> 
+  <input type="button" value="Добавить форму" onclick="addForm()"/>
+  
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>event</title>  
+</head>
+<body>
+
+   <button id='btn1'>Кнопка1</button><hr/>
+   <button id='btn2'>Кнопка2</button><hr/>
+   
+   <script>  
+   let btn1 = document.querySelector('#btn1');
+   let btn2 = document.querySelector('#btn2');
+
+   btn1.onclick = handler;
+   btn2.addEventListener('click',handler);
+   
+   function handler(ev){
+      console.log(ev);
+      console.log(ev.ctrlKey);
+      console.log(ev.target || ev.srcElement);
+      console.log(ev.clientX, ev.clientY);
+   }
+   
+  </script> 
+  
+  
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+

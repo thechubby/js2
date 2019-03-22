@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>return false</title>  
+</head>
+<body>
+
+   <a href='https://www.specialist.ru'>Ссылка</a><br>
+   <a href='#'>Ссылка</a><br>
+   
+   <script>  
+   let a = document.querySelector('a');  
+   a.onclick = function(){
+      console.log('Привет, мир!');
+      return false;
+   }
+
+   let a2 = document.querySelectorAll('a')[1];  
+   a2.onclick = function(){
+      console.log('Привет, мир2!');
+      return false;
+   }
+
+  </script> 
+  
+  
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+

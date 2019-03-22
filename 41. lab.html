@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>lab</title>
+  <!--<script src="lab-timer.js"></script>-->
+</head>
+<body>
+  
+<form action="" id="addRow">
+  <input type="text" />
+  <input type="button" value="Добавить" onclick="add()"/>
+</form>
+
+<ul id="ul">
+ <li>Lorem.</li>
+ <li>Amet.</li>
+ <li>Ea.</li>
+</ul>
+
+<script>  
+  function add(){
+    let form = document.querySelector('#addRow');
+    let ul   = document.querySelector('#ul');
+    let text = form.elements[0];
+    let clone= ul.getElementsByTagName('li')[0].cloneNode();
+    
+    clone.innerHTML = text.value;
+    text.value = '';
+    text.focus();
+    
+    ul.appendChild(clone);
+  }
+</script> 
+  
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+

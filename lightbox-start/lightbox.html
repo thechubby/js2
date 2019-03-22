@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+	<style>
+
+	* {
+	  font-family: Arial;
+	}
+	#gallery{
+	  width: 750px;
+	}
+	#gallery img{
+	  box-shadow: 0 0 2px #000;
+	  margin: 4px;
+	  border: 5px solid #fff;
+	}
+
+	#gallery img:hover{
+	  box-shadow: 0 0 7px #000;
+	}
+	#darkbox{
+	  background: rgba(0,0,0,.5);
+	}
+	#darkbox, #imgBox, #imgBox img {
+	  position: fixed;
+	  margin: auto;
+	  top: 0;
+	  left: 0;
+	  bottom: 0;
+	  right: 0;
+	}
+	#imgBox img {
+	  box-shadow: 0 0 10px #000;
+	  border: 5px solid #fff;
+	  border-radius: 5px;
+	}
+
+	</style>
+</head>
+<body>
+<div class="container">
+    <h1>Изображения</h1>
+    <div id="gallery">
+      <!--<img src="http://placehold.it/220x170" alt="" />
+      <img src="http://placehold.it/220x170" alt="" />
+      <img src="http://placehold.it/220x170" alt="" />
+      <img src="http://placehold.it/220x170" alt="" />
+      <img src="http://placehold.it/220x170" alt="" />   
+      <img src="http://placehold.it/220x170" alt="" />-->
+    </div>  
+  </div>  
+ <!-- <div id="darkbox"></div>
+  <div id="imgBox">
+  <img src="http://placehold.it/650x470" alt="" />
+  </div> -->
+<script>
+  let images = [
+    'cat1.jpg',
+    'cat2.jpg',
+    'cat3.jpg',
+    'cat4.jpg',
+    'cat5.jpg'  
+  ];
+  let gallery = document.querySelector("#gallery");
+  
+  images.forEach(function(imageName){
+    let img = document.createElement('img');
+    img.src = 'thumb/'+imageName;
+    
+    img.onclick = function(){
+      let darkbox = document.createElement('div');
+      darkbox.id = "darkbox";
+      
+      let imgBox = document.createElement('div');
+      imgBox.id = "imgBox";
+      let img= document.createElement('img');
+      img.src = 'img/'+this.src.split('/').pop();
+      imgBox.appendChild(img);
+      
+      imgBox.onclick = function(){
+        
+        let i = 0, step = 20, tick = 40;
+        let self = this;
+        (function(){
+          if(i < step){
+            img.style.opacity = 1 - i/step;
+            i++;
+            setTimeout(arguments.callee, tick);
+          } else { 
+             darkbox.remove();
+             self.remove();
+          }
+        })();
+      
+       
+      }
+      
+      document.body.appendChild(darkbox);
+      document.body.appendChild(imgBox);
+
+    }
+    
+    gallery.appendChild(img);
+    
+    
+  });
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</script>
+
+</body>
+</html>

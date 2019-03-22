@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>innerHTML</title>
+</head>
+<body>
+  
+  <div id='catalog'>
+    <h2>товар №123</h2>
+    <input type='text' id='text' autocomplete=off />  
+  </div>
+  
+  <script>  
+	function go(){
+      let div = document.getElementById('catalog'); 
+      let text = document.getElementById('text'); 
+      console.log(div.innerHTML); 
+
+      div.innerHTML += `
+        <h2>товар №${new Date().toLocaleTimeString()}</h2>
+        <p>текст текст текст
+      `+text.value;
+	}
+  </script> 
+  <button onclick='go()' >Поехали</button> 
+  
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+

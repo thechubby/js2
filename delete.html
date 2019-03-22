@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>stopPropagation</title>  
+  <style>  
+  div{ 
+    padding: 100px;
+    background: rgba(215,30,45,.5);
+    font-size: 2rem;
+    color: white
+  }
+  </style>  
+</head>
+<body>
+
+
+   <select name='city' id='city'>
+     <option>Москва
+     <option>Санкт-Петербург
+   </select>
+   
+   <script>  
+   let select = document.querySelector('#city');  
+   
+   console.log(select.lastChild)
+   console.log(select.options[1])
+   console.log(select.getElementsByTagName('option'))
+   console.log(select.lastChild.previousSibling)
+
+  </script> 
+  
+  
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+

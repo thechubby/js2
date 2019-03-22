@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>stopPropagation</title>  
+  <style>  
+  div{ 
+    padding: 100px;
+    background: rgba(215,30,45,.5);
+    font-size: 2rem;
+    color: white
+  }
+  </style>  
+</head>
+<body>
+
+
+   <div id='div1'>ДИВ1
+       <div id='div2'>ДИВ2
+            <div  id='div3'>ДИВ3</div>
+       </div>
+   </div>
+   
+   <script>  
+   let div = document.querySelectorAll('div');  
+   
+   for(let i = 0; i < div.length; i++)
+   div[i].addEventListener('click', function(ev){
+      console.log(this.firstChild.nodeValue);
+      //ev.stopPropagation();
+   });
+
+  </script> 
+  
+  
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+

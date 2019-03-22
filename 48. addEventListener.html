@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>addEventListener</title>  
+</head>
+<body>
+
+   <div id='place'></div>   
+   <textarea></textarea><hr>
+   <input type=checkbox id='checkbox' >Включать обработку сверху
+   <hr>
+   <output id='res'></output>
+   
+   <script>  
+   let textarea = document.querySelector('textarea');
+   let checkbox = document.querySelector('#checkbox');
+   
+   //textarea.onkeyup = handler1;
+   textarea.addEventListener('keyup',handler1);
+   //textarea.addEventListener('keyup',handler2);
+   //textarea.removeEventListener('keyup',handler2);
+   
+   checkbox.onclick = function(){
+      if(this.checked)
+        textarea.addEventListener('keyup',handler2);
+      else 
+        textarea.removeEventListener('keyup',handler2);
+   }
+   
+   function handler1(){ 
+      let res = document.querySelector('#res');
+      res.innerHTML = this.value + ` (${this.value.length})`;
+   }   
+   function handler2(){ 
+      let place = document.querySelector('#place');
+      place.innerHTML = this.value;
+   }
+  </script> 
+  
+  
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
